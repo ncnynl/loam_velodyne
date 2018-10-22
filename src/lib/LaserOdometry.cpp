@@ -71,10 +71,10 @@ LaserOdometry::LaserOdometry(const float& scanPeriod,
         _coeffSel(new pcl::PointCloud<pcl::PointXYZI>())
 {
   // initialize odometry and odometry tf messages
-  _laserOdometryMsg.header.frame_id = "/camera_init";
+  _laserOdometryMsg.header.frame_id = "/laser";
   _laserOdometryMsg.child_frame_id = "/laser_odom";
 
-  _laserOdometryTrans.frame_id_ = "/camera_init";
+  _laserOdometryTrans.frame_id_ = "/laser";
   _laserOdometryTrans.child_frame_id_ = "/laser_odom";
 }
 

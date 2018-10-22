@@ -78,10 +78,10 @@ LaserMapping::LaserMapping(const float& scanPeriod,
         _laserCloudSurfFromMap(new pcl::PointCloud<pcl::PointXYZI>())
 {
   // initialize mapping odometry and odometry tf messages
-  _odomAftMapped.header.frame_id = "/camera_init";
+  _odomAftMapped.header.frame_id = "/laser";
   _odomAftMapped.child_frame_id = "/aft_mapped";
 
-  _aftMappedTrans.frame_id_ = "/camera_init";
+  _aftMappedTrans.frame_id_ = "/laser";
   _aftMappedTrans.child_frame_id_ = "/aft_mapped";
 
   // initialize frame counter
